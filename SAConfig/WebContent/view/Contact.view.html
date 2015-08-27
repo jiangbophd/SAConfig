@@ -1,0 +1,49 @@
+<template data-controller-name="sa.config.controllers.Contact">
+<div data-sap-ui-type="sap.m.Page" class="defaultContent"
+	data-show-header="false">
+	<div class="mainNav">
+		<div data-sap-ui-type="sap.ui.core.mvc.HTMLView" data-view-name="sa.config.view.Menu"></div>
+	</div>
+	<div class="pageHeader" data-sap-ui-type="sap.ui.layout.HorizontalLayout">
+		<span  class="sapUiIcon contactTitle"></span>
+		<span class="headerLabel" data-sap-ui-type="sap.m.Label" data-text="{i18n>contact}"></span>
+	</div>
+	<div class="formBox" data-sap-ui-type="sap.ui.layout.VerticalLayout">
+		<div data-sap-ui-type="sap.ui.layout.HorizontalLayout">
+			<div class="labelTxt" data-sap-ui-type="sap.m.Label" data-text="{i18n>defaultContactRole}" data-height="40px" data-text-align="Left" data-width="200px"></div>
+			<div id="defaultRoleSelect" data-sap-ui-type="sap.m.Select" class="selectList" data-width="400px" data-items="{Account>/RoleSupSet/results}">
+				<div data-sap-ui-type="sap.ui.core.Item" data-key="{Account>RoleKey}" data-text="{Account>RoleKey}"></div>	
+			</div>
+		</div>
+		<div data-sap-ui-type="sap.ui.layout.HorizontalLayout">
+			<div class="labelTxt" data-sap-ui-type="sap.m.Label" data-text="{i18n>pushDeletedContacts}" data-height="40px" data-text-align="Left" data-width="200px"></div>
+			<div data-sap-ui-type="sap.m.Switch" data-state="true" data-custom-text-on="Yes" data-custom-text-off="No">		
+			</div>
+		</div>
+		<div data-sap-ui-type="sap.ui.layout.HorizontalLayout">
+			<div class="labelTxt" data-sap-ui-type="sap.m.Label" data-text="{i18n>ContactRoles}" data-height="40px" data-text-align="Left" data-width="200px"></div>
+			<div id="roleSetMultiComboBox" data-sap-ui-type="sap.m.MultiComboBox" data-width="400px" data-items="{Account>/RoleSupSet/results}" data-selected-keys="{selectedKey>/roleSelectedSet}">
+				<div data-sap-ui-type="sap.ui.core.Item" data-key="{Account>RoleKey}" data-text="{Account>RoleKey}"></div>			
+			</div>
+		</div>
+		<div data-sap-ui-type="sap.ui.layout.HorizontalLayout">
+			<div class="labelTxt" data-sap-ui-type="sap.m.Label" data-text="{i18n>ContactText}" data-height="40px" data-text-align="Left" data-width="200px"></div>
+			<div id="contactTextMultiComboBox" data-sap-ui-type="sap.m.MultiComboBox" data-width="400px" data-items="{Account>/BPTextSupSet/results}" data-selected-keys="{selectedKey>/textObjectKeySet}">
+				<div data-sap-ui-type="sap.ui.core.Item" data-key="{Account>Textid}" data-text="{Account>Textid}"></div>			
+			</div>
+		</div>
+		<div data-sap-ui-type="sap.ui.layout.HorizontalLayout">
+			<div class="labelTxt" data-sap-ui-type="sap.m.Label" data-text="{i18n>ContactRelations}" data-height="40px" data-text-align="Left" data-width="200px"></div>
+			<div id="contactRelationsMultiComboBox" data-sap-ui-type="sap.m.MultiComboBox" data-width="400px" data-items="{Account>/RelationshipCategorySupSet/results}" data-selected-keys="{selectedKey>/accountRelations}">
+				<div data-sap-ui-type="sap.ui.core.Item" data-key="{Account>RelationshipCategory}" data-text="{Account>Description}"></div>		
+			</div>
+		</div>
+		
+		<div data-sap-ui-type="sap.ui.layout.HorizontalLayout">
+			<div class="labelTxt" data-sap-ui-type="sap.m.Label"  data-height="40px" data-text-align="Left" data-width="200px"></div>
+			<div class="submitButton" data-sap-ui-type="sap.ui.commons.Button" data-press="createContact" data-text="{i18n>submit}"></div>
+		</div>
+		
+	</div>
+</div>
+</template>

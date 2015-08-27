@@ -1,0 +1,308 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face { font-family: "SAP-icons"; font-style: normal; font-weight: normal; src: url("../fonts/SAP-icons.eot?#iefix") format("embedded-opentype"), url(" ../fonts/SAP-icons.ttf") format("truetype");}
+
+.sapUiView {
+	background:url(../images/indexBg.jpg) no-repeat;
+	background-size: cover;
+}
+
+.sapMShellBrandingBar {
+position: absolute;
+left: 0;
+top: 0;
+width: 100%;
+height: 0px;
+z-index: 1;
+background-color: white; 
+}
+
+.sapMListBGSolid .sapMLIB {
+border-bottom: none;
+}
+
+.sapMPanelContent {
+border-bottom: none; 
+background-color:#F7F7F7;
+}
+
+.sapMPanelHdr:not(.sapMPanelHdrExpandable), .sapMPanelWrappingDiv, .sapMPanelWrappingDivTb {
+border-bottom: none; 
+background-color:#DCEBEF;
+}
+
+.sap-desktop .sapMShellAppWidthLimited .sapMShellCentralBox {
+left:0;
+margin-left:0px;
+width:100%;
+background-color: rgba(255,255,255,0);
+overflow-y:hidden
+}
+
+.appTitle{
+	margin-top:60px;
+	color:#007cc0; 
+	font-size:34px; 
+	text-align:center;
+	width:100%;
+	font-weight:bold;
+}
+
+.customTile {
+display: block;
+float: left;
+height: 230px;
+width: 200px;
+margin: 10px;
+border-radius: 2px;
+box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+background: #fff;
+background-color: #214458;
+overflow: hidden;
+color: #007cc0;
+}
+
+.customTile:active {background-color: #04202f;}
+
+.customTile .sapUiIcon {
+display: block;
+display: inline; 
+float: right; 
+margin-top:110px;
+margin-right:15px;
+font-size: 3.75rem;
+}
+
+
+
+.tileLabel{
+color: white;
+font-size: 1.5rem;
+margin-left:15px;
+margin-top:20px
+}
+.tileGeneral{
+	background:url("../images/sa_sprites.png") no-repeat;
+	background-position: -215px -70px ;
+	width: 60px;
+	height: 60px;
+}
+.tileVisit{
+	background:url("../images/sa_sprites.png") no-repeat;
+	background-position: -119px -172px ;
+	width: 60px;
+	height: 60px;
+}
+.tileAccount{
+	background:url("../images/sa_sprites.png") no-repeat;
+	background-position: -18px -71px ;
+	width: 60px;
+	height: 60px;
+}
+.tileContact{
+	background:url("../images/sa_sprites.png") no-repeat;
+	background-position: -121px -70px ;
+	width: 60px;
+	height: 60px;
+}
+.tileOpp{
+	background:url("../images/sa_sprites.png") no-repeat;
+	background-position: -419px -73px ;
+	width: 60px;
+	height: 60px;
+}
+.tileLead{
+	background:url("../images/sa_sprites.png") no-repeat;
+	background-position: -321px -75px ;
+	width: 60px;
+	height: 60px;
+}
+.tileTask{
+	background:url("../images/sa_sprites.png") no-repeat;
+	background-position: -19px -164px ;
+	width: 60px;
+	height: 60px;
+}
+.tileSalesOrder{
+	background:url("../images/sa_sprites.png") no-repeat;
+	background-position: -19px -164px ;
+	width: 60px;
+	height: 60px;
+}
+
+.defaultContent{
+	background-color:white;
+	background: url(../images/navBg.png) repeat-y 0 0 #fff;
+}
+
+.pageHeader {
+height: 76px;
+border-bottom: 1px solid #ccc;
+text-align: center;
+display:block;
+}
+
+.pageHeader > div { display:inline;}
+.pageHeader span {margin: 18px 10px 0;display: inline-block;}
+
+.pageHeader .headerLabel {
+margin: 0;
+color: #007cc0;
+font-size: 30px;
+text-align: center;
+margin-top: 20px;
+}
+.visitTitle{
+	background:url("../images/sa_sprites.png") no-repeat;
+	background-position: -351px -262px ;
+	width: 34px;
+	height: 34px;
+}
+.taskTitle{
+	background:url("../images/sa_sprites.png") no-repeat;
+	background-position: -312px -254px ;
+	width: 34px;
+	height: 34px;
+}
+.oppTitle{
+	background:url("../images/sa_sprites.png") no-repeat;
+	background-position: -211px -259px ;
+	width: 34px;
+	height: 34px;
+}
+.leadTitle{
+	background:url("../images/sa_sprites.png") no-repeat;
+	background-position: -158px -257px ;
+	width: 34px;
+	height: 34px;
+}
+.contactTitle{
+	background:url("../images/sa_sprites.png") no-repeat;
+	background-position: -58px -258px ;
+	width: 34px;
+	height: 34px;
+}
+.accountTitle{
+	background:url("../images/sa_sprites.png") no-repeat;
+	background-position: -10px -261px ;
+	width: 34px;
+	height: 34px;
+}
+.salesOrderTitle{
+	background:url("../images/sa_sprites.png") no-repeat;
+	background-position: -261px -259px ;
+	width: 34px;
+	height: 34px;
+}
+
+.userManagementTitle{
+	background:url("../images/sa_sprites.png") no-repeat;
+	background-position: -261px -259px ;
+	width: 34px;
+	height: 34px;
+}
+
+/* Navigation */
+.mainNav { width:80px; float:left;}
+.mainNav .menuItem{ margin:0; padding:0;display:block; border-bottom:1px solid #ccc; color:#fff; font-size:40px; height:80px;line-height:80px; text-decoration:none; text-align:center;background-color:#007CC0};
+.mainNav  { margin:0; padding:0;display:block; border-bottom:1px solid #ccc; color:#fff; font-size:40px; height:80px;line-height:80px; text-decoration:none; text-align:center;background-color:#007CC0}
+.mainNav .menuItem.current{ background-color:#032d48;}
+.menuIndex{
+	background:url("../images/sa_sprites.png") no-repeat;
+	background-position: -154px -6px ;
+	width: 40px;
+	height: 40px;
+}
+.menuTask{
+	background:url("../images/sa_sprites.png") no-repeat;
+	background-position: -356px -6px ;
+	width: 40px;
+	height: 40px;
+}
+.menuOpp{
+	background:url("../images/sa_sprites.png") no-repeat;
+	background-position: -255px -7px ;
+	width: 40px;
+	height: 40px;
+}
+.menuVisit{
+	background:url("../images/sa_sprites.png") no-repeat;
+	background-position: -409px -6px ;
+	width: 40px;
+	height: 40px;
+}
+.menuContact{
+	background:url("../images/sa_sprites.png") no-repeat;
+	background-position: -55px -5px ;
+	width: 40px;
+	height: 40px;
+}
+.menuAccount{
+	background:url("../images/sa_sprites.png") no-repeat;
+	background-position: -6px -8px ;
+	width: 40px;
+	height: 41px;
+}
+.menuLead{
+	background:url("../images/sa_sprites.png") no-repeat;
+	background-position: -206px -5px ;
+	width: 40px;
+	height: 40px;
+}
+.menuGeneral{
+	background:url("../images/sa_sprites.png") no-repeat;
+	background-position: -106px -6px ;
+	width: 40px;
+	height: 40px;
+}
+.menuSalesOrder{
+	background:url("../images/sa_sprites.png") no-repeat;
+	background-position: -306px -7px ;
+	width: 40px;
+	height: 40px;
+}
+
+
+.formBox { float:left; margin-left:10%;margin-top:75px; padding:0 40px;}
+.labelTxt { display:block; float:left; width:300px; line-height:40px; padding-right:25px; margin-bottom:20px; text-align:right;}
+.visitLabelTxt { display:block; float:left;  line-height:40px; padding-right:10px; margin-bottom:20px; text-align:right;}
+.submitButton {
+	height: 38px;
+padding: 0 25px;
+border: 1px solid #006ca7;
+border-radius: 2px;
+background-color: #007cc0;
+color: #fff;
+font-size: 14px;
+line-height: 38px;
+text-align: center;
+cursor: pointer;
+margin-right:40px;
+}
+
+.sapUiBtnS.sapUiBtnNorm.sapUiBtnStd {
+	color: white;
+}
+.sapUiBtnS.sapUiBtnNorm.sapUiBtnStd.sapUiBtn.submitButton {
+   background-color: #007cc0; 
+}
+.sapUiBtnS.sapUiBtnNorm.sapUiBtnAct {
+	background-color:white;
+}
+
+.sapMTC{
+	margin:auto;
+}
+
+.defaultMarginTop{
+margin-top:30px;
+}
+
+.userLabelTxt {
+	display:block; float:left; width:300px; line-height:40px; padding-right:25px; margin-bottom:20px; text-align:right;margin-top:12px;
+}
+
+.userManagementInput{
+	margin-top:8px;
+}

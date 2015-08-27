@@ -1,0 +1,67 @@
+<template data-controller-name="sa.config.controllers.Lead">
+<div data-sap-ui-type="sap.m.Page" class="defaultContent"
+	data-show-header="false">
+	<div class="mainNav">
+		<div data-sap-ui-type="sap.ui.core.mvc.HTMLView" data-view-name="sa.config.view.Menu"></div>
+	</div>
+	<div class="pageHeader" data-sap-ui-type="sap.ui.layout.HorizontalLayout">
+		<span  class="sapUiIcon leadTitle"></span>
+		<span class="headerLabel" data-sap-ui-type="sap.m.Label" data-text="{i18n>lead}"></span>
+	</div>
+	<div class="formBox" data-sap-ui-type="sap.ui.layout.VerticalLayout">
+		<div data-sap-ui-type="sap.ui.layout.HorizontalLayout">
+			<div class="labelTxt" data-sap-ui-type="sap.m.Label" data-text="{i18n>defaultAccountRole}" data-height="40px" data-text-align="Left" data-width="200px"></div>
+			<div data-sap-ui-type="sap.m.Select" data-width="400px" data-items="{visit>/RoleSupSet/results}">
+				<div data-sap-ui-type="sap.ui.core.Item" data-key="{visit>RoleKey}" data-text="{visit>RoleKey}"></div>			
+			</div>
+		</div>		
+		<div data-sap-ui-type="sap.ui.layout.HorizontalLayout">
+			<div class="labelTxt" data-sap-ui-type="sap.m.Label"  data-text="{i18n>visitProcessType}" data-height="40px" data-text-align="Left" data-width="200px"></div>
+			<div class="submitButton" data-sap-ui-type="sap.ui.commons.Button" data-text="{i18n>showSelectList}" data-press="handleSelectDialogPress"></div>
+		</div>
+		<div data-sap-ui-type="sap.m.List" data-items="{processTypeSet>/ProcessTypeSet}">
+			<div data-sap-ui-type="sap.m.CustomListItem">
+				<div data-sap-ui-type="sap.ui.layout.HorizontalLayout">
+					<div class="labelTxt" data-sap-ui-type="sap.m.Label"   data-height="40px" data-text-align="Left" data-width="200px"></div>
+					<div  data-sap-ui-type="sap.m.Panel" data-expandable="true" data-expanded="false" data-header-text="{processTypeSet>ProcessTypeKey}" data-width="600px">
+						<div data-sap-ui-aggregation="content">
+							<div data-sap-ui-type="sap.ui.layout.HorizontalLayout">			
+								<div  class="visitLabelTxt" data-sap-ui-type="sap.m.Label" data-text="{i18n>visitPartner}" data-height="40px" data-text-align="Right" data-width="150px"></div>
+								<div data-sap-ui-type="sap.m.Select" data-width="400px" data-items="{visit>/PartnerFunctionSupSet/results}"  data-change="changeMultipFuntionBox">
+									<div data-sap-ui-type="sap.ui.core.Item" data-key="{visit>PartnerFunction}" data-text="{visit>PartnerFunction}"></div>			
+								</div>
+							</div>
+							<div data-sap-ui-type="sap.ui.layout.HorizontalLayout">			
+								<div  class="visitLabelTxt" data-sap-ui-type="sap.m.Label"  data-height="40px" data-text-align="Right" data-width="150px"></div>
+								<div data-sap-ui-type="sap.m.List"  data-width="400px" data-items="{processTypeSet>PartnerFunctionSet}" data-mode="Delete" data-delete="handlerDelete">
+									<div data-sap-ui-type="sap.m.InputListItem" data-label="{processTypeSet>PartnerFunctionKey}">
+										<div data-sap-ui-type="sap.ui.layout.HorizontalLayout">
+										<div data-sap-ui-type="sap.m.Switch"  data-state="{processTypeSet>state}" data-custom-text-on="X" data-custom-text-off=" " data-text-align="Right" data-change="changeFixedSwitch"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div data-sap-ui-type="sap.ui.layout.HorizontalLayout">			
+								<div  class="visitLabelTxt" data-sap-ui-type="sap.m.Label" data-text="{i18n>visitTextObject}" data-height="40px" data-text-align="Right" data-width="150px"></div>
+								<div data-sap-ui-type="sap.m.MultiComboBox" data-width="400px" data-items="{visit>/OrderTextTypeSupSet/results}" data-selected-keys="{processTypeSet>visitTextTypeSelectKeys}" data-selection-change="changeVisitTextObject">
+									<div data-sap-ui-type="sap.ui.core.Item" data-key="{visit>TextType}" data-text="{visit>TextType}"></div>		
+								</div>
+							</div>
+							<div data-sap-ui-type="sap.ui.layout.HorizontalLayout">			
+								<div  class="visitLabelTxt" data-sap-ui-type="sap.m.Label" data-text="{i18n>visitSurveys}" data-height="40px" data-text-align="Right" data-width="150px"></div>
+								<div data-sap-ui-type="sap.m.MultiComboBox" data-width="400px" data-items="{visit>/SurveySupSet/results}" data-selected-items="{processTypeSet>surveySelectedKeys}" data-selection-change="changeSurveyObject">
+									<div data-sap-ui-type="sap.ui.core.Item" data-key="{visit>SurveyID}" data-text="{visit>SurveyID}"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div data-sap-ui-type="sap.ui.layout.HorizontalLayout" class="defaultMarginTop">
+			<div class="labelTxt" data-sap-ui-type="sap.m.Label"  data-height="40px" data-text-align="Left" data-width="200px"></div>
+			<div class="submitButton" data-sap-ui-type="sap.ui.commons.Button" data-press="createVisit" data-text="{i18n>submit}"></div>
+		</div>	
+	</div>
+</div>
+</template>

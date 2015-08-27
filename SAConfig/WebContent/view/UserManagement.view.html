@@ -1,0 +1,30 @@
+<template data-controller-name="sa.config.controllers.UserManagement">
+<div data-sap-ui-type="sap.m.Page" class="defaultContent"
+	data-show-header="false">
+	<div class="mainNav">
+		<div data-sap-ui-type="sap.ui.core.mvc.HTMLView" data-view-name="sa.config.view.Menu"></div>
+	</div>
+	<div class="pageHeader" data-sap-ui-type="sap.ui.layout.HorizontalLayout">
+		<span  class="sapUiIcon userManagementTitle"></span>
+		<span class="headerLabel" data-sap-ui-type="sap.m.Label" data-text="{i18n>userManagementForTitle}"></span>
+	</div>
+
+	<div class="formBox" data-sap-ui-type="sap.ui.layout.VerticalLayout">
+		<div data-sap-ui-type="sap.m.List" data-mode="Delete" data-items="{DefaultUserList>/}" data-delete="handlerDelete">
+			<div data-sap-ui-type="sap.m.CustomListItem">
+				<div data-sap-ui-type="sap.ui.layout.HorizontalLayout">
+					<div class="userLabelTxt" data-sap-ui-type="sap.m.Label" data-text="{DefaultUserList>UserName}" data-height="40px" data-text-align="Left" data-width="200px"></div>
+					<div class="userManagementInput" data-sap-ui-type="sap.m.MultiComboBox" data-width="400px" data-items="{Management>/results}" data-selection-change="changeUserSAObject" data-selected-keys="{DefaultUserList>selectedKeys}">
+						<div data-sap-ui-type="sap.ui.core.Item" data-key="{Management>SaObject}" data-text="{Management>ShortText}"></div>			
+					</div>
+				</div>
+			</div>
+		</div>
+		<div data-sap-ui-type="sap.ui.layout.HorizontalLayout">
+			<div class="labelTxt" data-sap-ui-type="sap.m.Label"  data-height="40px" data-text-align="Left" data-width="200px"></div>
+			<div class="submitButton" data-sap-ui-type="sap.ui.commons.Button" data-press="createUserManagement" data-text="{i18n>submit}"></div>
+			<div class="submitButton" data-sap-ui-type="sap.ui.commons.Button" data-press="handleSelectDialogPress" data-text="{i18n>addUser}"></div>
+		</div>
+	</div>
+</div>
+</template>
